@@ -1,6 +1,6 @@
 # Abstract
 
-This is my submission for Nulogy test
+This is my submission for the Nulogy test
 
 # Instruction
 
