@@ -5,7 +5,7 @@ This is my submission for the Nulogy test
 # Instruction
 
 1. `rake test`
-2. Done!
+2. Done! :)
 
 # Author
 
