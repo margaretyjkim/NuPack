@@ -11,6 +11,8 @@ def calculate_markup(base, num_people, type)
 			type = 1
 		end
 
+	people_markup_percent = num_people *= .12
+	people_markup = (base + flat_markup) + people_markup_percent
 
 
 end
