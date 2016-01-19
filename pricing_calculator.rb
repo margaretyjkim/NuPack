@@ -1,18 +1,23 @@
 def calculate_markup(base, num_people, type)
-	flat_markup = base * .05
-	type_markup = (base + flat_markup) * type
-		if type == "drugs"
-			type = 0.075
-		elsif type == "food"
-			type = 0.13
-		elsif type == "electronics"
-			type = 0.02
-		else
-			type = 1
-		end
+	type_percent = case type
+	when "drugs"
+		0.075
+	when "food"
+		0.13
+	when "electronics"
+		0.02
+	else
+		0
+	end
 
-	people_markup_percent = num_people *= .12
-	people_markup = (base + flat_markup) + people_markup_percent
+	flat_markup = base * 0.05
 
-	total = base + flat_markup + people_markup
+	type_markup = (base + flat_markup) * type_percent
+
+	people_markup_percent = num_people * 0.012
+	people_markup = (base + flat_markup) * people_markup_percent
+
+	total = base + flat_markup + type_markup + people_markup
+
+	total.round(2)
 end

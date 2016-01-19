@@ -1,6 +1,6 @@
 require './test_helper'
 
-require 'pricing_calculator'
+require_relative 'pricing_calculator'
 
 class TestPricing < MiniTest::Test
 	def test_first_input
@@ -11,7 +11,8 @@ class TestPricing < MiniTest::Test
 		assert_equal 6199.81, calculate_markup(5432.00, 1, "drugs")
 	end
 
-		def test_third_input
+	def test_third_input
 		assert_equal 13707.63, calculate_markup(12456.95, 4, "books")
 	end
+
 end
